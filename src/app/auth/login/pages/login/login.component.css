@@ -1,0 +1,100 @@
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login {
+    width: 65%;
+    max-width: 1000px;
+    height: 90vh;
+    max-height:650px;
+    display: flex;
+    background-color: white;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.15); /* Sombra suave pero destacada */
+}
+
+.login__illustration {
+    width: 60%;
+    height: 100%;
+    background: url("https://images.unsplash.com/photo-1532012197267-da84d127e765?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D") 
+                center / cover no-repeat;
+}
+
+.login__content {
+    width: 40%;
+    height: 100%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.login__form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.login__logo {
+    width: 80%;
+    margin: 20px auto;
+    display: block;
+}
+
+.login__group {
+    position: relative;
+    width: 100%;
+}
+
+.login__input {
+    width: 100%;
+    padding: 15px 10px 15px 40px;
+    border: 1px solid #f2f4f7;
+    outline: none;
+    border-radius: 6px;
+    transition: box-shadow 0.3s ease-in-out, border-color 0.3s ease-in-out;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.login__input:focus {
+    border-color: #6c5ce7;
+    box-shadow: 0px 4px 15px rgba(108, 92, 231, 0.4);
+}
+
+.login__input_invalid{
+    border-color: red;
+}
+
+.login__icon {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #495057;
+    font-size: 20px;
+}
+
+.login__button {
+    padding: 15px;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    color: white;
+    background-color: var(--button-color);
+    border-radius: 6px;
+}
+
+.login__register {
+    text-align: center;
+    color: gray;
+    font-size: .9rem;
+}
+
+.login__register > a {
+    text-decoration: none;
+    color: var(--button-color);
+}

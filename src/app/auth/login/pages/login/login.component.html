@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="login">
+        <div class="login__illustration"></div>
+        <div class="login__content">
+            <form class="login__form" [formGroup]="loginForm" (ngSubmit)="login()">
+                <img src="../../../../../assets/login-logo.png" alt="Logo" class="login__logo">
+                
+                <div>
+                    <div class="login__group">                    
+                        <input [ngClass]="{'login__input_invalid': hasError('username', 'required')}" formControlName="username" type="text" name="username" id="username" class="login__input" placeholder="Username...">
+                        <i class='bx bx-envelope login__icon'></i>                        
+                    </div>
+                    <span class="error_field" *ngIf="hasError('username', 'required')">
+                        El username es requerido
+                    </span>
+                </div>
+               
+                <div>
+                    <div class="login__group">                    
+                        <input [ngClass]="{'login__input_invalid': hasError('password', 'required')}" formControlName="password" type="password" name="password" id="password" class="login__input" placeholder="Password...">
+                        <i class='bx bxs-key login__icon'></i>                       
+                    </div>
+                    <span class="error_field" *ngIf="hasError('password', 'required')">
+                        La contraseña es requerida
+                    </span>
+                </div>
+                
+
+                <button type="submit" class="login__button">Entrar</button>
+                <p class="login__register">No tienes cuenta? <a href="">Regístrate ahora</a></p>
+            </form>
+        </div>
+    </div>
+</div>
