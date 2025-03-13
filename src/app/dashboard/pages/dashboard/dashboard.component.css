@@ -1,0 +1,147 @@
+.sidebar{
+    width: 280px;
+    min-width: 80px;
+    background-color: white;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    padding: 10px;
+    box-shadow: 3px 0px gray 10px;
+    transition: 1s all ease;
+    overflow-x: hidden;
+}
+
+/* SIDEBAR HEADER */
+
+.sidebar__header{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: start;
+    align-items: end;
+}
+
+.sidebar__header .sidebar__figure{
+    width: 30%;
+    min-width: 60px;
+}
+
+.sidebar__figure .logo{
+    width: 100%;
+}
+
+.sidebar .title{
+    text-transform: uppercase;
+    margin-left: 10px;
+}
+
+/* SIDEBAR NAV */
+
+.sidebar__content{
+    margin-top: 40px;
+    height: calc(100vh - 110px);
+}
+
+.sidebar__nav{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sidebar__nav ul{
+    display: flex;
+    flex-direction: column;    
+    gap: 15px;
+}
+
+.nav__option{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 15px 0px;
+    text-decoration: none;
+    border-radius: 6px;
+    color: #495057;
+    cursor: pointer;
+}
+
+.nav__option:hover{
+    background-color: #ede9f7;
+}
+
+.nav__option i{
+    text-align: center;
+    min-width: 60px;
+    font-size: 1.2rem;
+}
+
+.active{
+    color: #6e35fc;
+    background-color: #ede9f7;
+}
+
+
+/* DASHBOARD CONTENT */
+
+/* DASHBOARD TOP */
+
+
+.dashboard_content{
+    position: relative;
+    width: calc(100% - 280px);
+    left: 280px;
+    transition: 1s all ease;
+}
+
+.dashboard_top{
+    width: 100%;
+    height: 50px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+}
+
+.dashboard_top i{
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+.nav__option span{
+    transition: 1s all ease;
+}
+
+.dashboard__user{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.dashboard__user .user__name{
+    font-size: .9rem;
+    color: rgb(99, 99, 99);
+}
+
+.dashboard__user .user__photo{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+/* sidebar - close */
+
+.sidebar.close{
+    width: 80px;
+}
+
+.sidebar.close .nav__option span{
+    opacity: 0;
+}
+
+.sidebar.close + .dashboard_content{
+    position: relative;
+    width: calc(100% - 80px);
+    left: 80px;
+}

@@ -1,1 +1,47 @@
-<p>dashboard works!</p>
+<div class="dashboard">
+    
+    <!-- SIDEBAR -->
+    <div [ngClass]="isOpen ? 'close' : ''" class="sidebar">
+        <div class="sidebar__header">
+            <figure class="sidebar__figure">
+                <img src="../../../../assets/login-logo.png" alt="Logo" class="logo">
+            </figure>
+            <h2 class="title">Library</h2>
+        </div>
+        
+        <div class="sidebar__content">
+            <nav class="sidebar__nav">
+                <ul>
+                    <li *ngFor="let module of modules" class="nav__item">
+                        <a class="nav__option">
+                            <i class="{{module.icon}}"></i>
+                            <span>{{module.name}}</span>
+                        </a>
+                    </li>                
+                </ul>
+                <ul>
+                    <li class="nav__item">
+                        <a (click)="logout()" class="nav__option">
+                            <i class='bx bx-log-out-circle'></i>
+                            <span>Logout</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+        </div>
+    </div>
+
+    <div class="dashboard_content">
+        <div class="dashboard_top">
+            <i class='bx bx-menu' (click) = "menuToggle()"></i>
+            <div class="dashboard__user">
+                <p class="user__name">Breynner Ariza</p>
+                <img src="../../../../assets/user.jpg" alt="User photo" class="user__photo">
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+

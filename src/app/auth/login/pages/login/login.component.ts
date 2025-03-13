@@ -48,7 +48,7 @@ export class LoginComponent {
         error: (error: HttpErrorResponse) => {
           let requestFailed : RequestFailed = error.error;
           this._toast.error(
-            requestFailed.errors.join(','),
+            requestFailed.errors.join(', '),
             'Login fallido'
           );
         }

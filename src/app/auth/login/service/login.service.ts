@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class LoginService {
 
-  private urlBase: string = 'http://localhost:9001/api/library/auth'
+  private urlBase: string = 'http://localhost:9001/api/library/v1/auth'
 
   constructor(private _client: HttpClient) {}
 
